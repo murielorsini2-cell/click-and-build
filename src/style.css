@@ -135,3 +135,7 @@ body.light .mode-chooser button.mode-active{outline-color:rgba(0,0,0,.45)}
 .needs-panel{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:10px 0;font-size:14px}.care-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
 #lifeStage{font-size:13px;opacity:.9}.world-locked .world-zone{opacity:.38;filter:grayscale(.7);cursor:not-allowed}
 .founder[data-stage="0"] .founder-avatar{font-size:34px}.founder[data-stage="1"] .founder-avatar{font-size:39px}.founder[data-stage="2"] .founder-avatar{font-size:44px}.founder[data-stage="3"] .founder-avatar{font-size:50px}
+
+.milestone{margin:10px auto;padding:8px 12px;max-width:390px;border-radius:999px;background:rgba(255,255,255,.16);font-weight:700}
+.environment-unlock{margin:12px auto;padding:12px;border-radius:14px;background:rgba(255,255,255,.2)}
+.environment-unlock span{display:block;margin:6px}.environment-unlock button{font-size:16px!important;padding:8px 12px!important}
