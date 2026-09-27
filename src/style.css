@@ -105,3 +105,11 @@ body.light .ad-panel {
     display: none;
   }
 }
+
+
+.mode-chooser{margin:0 auto 18px;padding:10px;border-radius:12px;background:rgba(0,0,0,.12)}
+.mode-chooser #modeStatus{display:block;font-weight:700;margin-bottom:6px}
+.mode-chooser #modeMessage{min-height:22px;font-size:14px;margin-top:5px}
+.mode-chooser button.mode-active{outline:3px solid rgba(255,255,255,.8);font-weight:700}
+body.light .mode-chooser{background:rgba(0,0,0,.06)}
+body.light .mode-chooser button.mode-active{outline-color:rgba(0,0,0,.45)}
