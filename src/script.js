@@ -9,7 +9,7 @@ let clicksThisSecond=0, cpsSamples=[], cps=0;
 let elapsedSeconds=parseInt(localStorage.getItem("elapsedSeconds"),10)||0, timerInterval=null;
 
 const $=id=>document.getElementById(id);
-const scoreEl=$("score"), snd=$("clicksnd"), cpsLive=$("cpsLive"), powerEl=$("power"), levelEl=$("level");
+const scoreEl=$("score"), xpDisplay=$("xpDisplay"), snd=$("clicksnd"), cpsLive=$("cpsLive"), powerEl=$("power"), levelEl=$("level");
 const progressText=$("progressText"), progressFill=$("progressFill"), levelMessage=$("levelMessage"), rewardEl=$("reward");
 const upgradeBtn=$("upgradeBtn"), recordBtn=$("recordBtn"), themeBtn=$("themeBtn"), boostBtn=$("boostBtn");
 let lastLevel=Math.floor(xp/100)+1;
@@ -18,6 +18,7 @@ function save(){localStorage.setItem("clickScore",score);localStorage.setItem("c
 function render(){
  const level=Math.floor(xp/100)+1, progress=xp%100, next=Math.floor(level/10)*10+10;
  scoreEl.innerText=score;
+ if(xpDisplay) xpDisplay.innerText=`XP : ${xp}`;
  levelEl.innerText=`⭐ Niveau : ${level}`;
  progressText.innerText=`Progression : ${progress}% — encore ${100-progress} XP`;
  progressFill.style.width=`${progress}%`;
@@ -46,7 +47,7 @@ $("btn").onclick=()=>{
    }
    celebrate(); setTimeout(()=>levelMessage.innerText="",3000);
  }
- save();render();startTimer();
+ save();render();renderWorld();startTimer();
  const effect=$("clickEffect");effect.innerText=`+${boost}`;setTimeout(()=>effect.innerText="",400);
  if(snd){snd.currentTime=0;snd.play().catch(()=>{});}
  scoreEl.classList.add("pop");setTimeout(()=>scoreEl.classList.remove("pop"),200);
@@ -90,3 +91,27 @@ function renderMode(){
 localModeBtn.onclick=()=>{playMode="local";localStorage.setItem("playMode",playMode);renderMode()};
 onlineModeBtn.onclick=()=>{playMode="online";localStorage.setItem("playMode",playMode);renderMode()};
 renderMode();
+
+
+// MONDE 1 — PROTOTYPE ÉVOLUTIF
+const worldStage=$("worldStage"),worldMap=$("worldMap"),worldHint=$("worldHint");
+const worldZones=[...document.querySelectorAll(".world-zone")];
+let worldInfluence=JSON.parse(localStorage.getItem("worldInfluence")||'{"nature":0,"build":0,"energy":0}');
+function getWorldStage(){
+ if(xp>=1000)return {name:"Monde en expansion",stage:4};
+ if(xp>=500)return {name:"Village naissant",stage:3};
+ if(xp>=200)return {name:"Premières fondations",stage:2};
+ if(xp>=50)return {name:"Premières pousses",stage:1};
+ return {name:"Terre vierge",stage:0};
+}
+function renderWorld(){
+ const w=getWorldStage();worldStage.textContent="Étape : "+w.name;worldMap.dataset.stage=String(w.stage);
+ worldZones.forEach(z=>{const key=z.dataset.zone;z.dataset.influence=String(worldInfluence[key]||0)});
+}
+worldZones.forEach(zone=>zone.onclick=()=>{
+ const key=zone.dataset.zone;worldInfluence[key]=(worldInfluence[key]||0)+1;
+ localStorage.setItem("worldInfluence",JSON.stringify(worldInfluence));
+ worldHint.textContent="Influence "+zone.textContent.trim()+" : "+worldInfluence[key]+" — cette orientation servira aux futures branches du monde.";
+ $("btn").click();renderWorld();
+});
+renderWorld();
