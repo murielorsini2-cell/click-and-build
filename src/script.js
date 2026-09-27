@@ -98,14 +98,22 @@ const worldStage=$("worldStage"),worldMap=$("worldMap"),worldHint=$("worldHint")
 const worldZones=[...document.querySelectorAll(".world-zone")],founder=$("founder"),wildlife=$("wildlife");
 const hungerEl=$("hunger"),careEl=$("care"),growthEl=$("growth"),feedBtn=$("feedBtn"),careBtn=$("careBtn"),founderLabel=$("founderLabel");
 let worldInfluence=JSON.parse(localStorage.getItem("worldInfluence")||'{"nature":0,"animals":0,"build":0,"energy":0}');
-let creature=JSON.parse(localStorage.getItem("creatureState")||'{"hunger":50,"care":50,"growth":0}');
+let creature=JSON.parse(localStorage.getItem("creatureState")||'{"hunger":50,"care":50,"growth":0,"clicks":0}');
+if(!Number.isFinite(creature.clicks)) creature.clicks=0;
+const milestoneEl=$("milestone"),environmentUnlock=$("environmentUnlock");
+const earlyMilestones=[10,25,50,75,100];
 function saveCreature(){localStorage.setItem("creatureState",JSON.stringify(creature))}
-function creatureStage(){if(creature.growth>=75)return 3;if(creature.growth>=40)return 2;if(creature.growth>=15)return 1;return 0}
+function creatureStage(){if(creature.clicks>=75)return 4;if(creature.clicks>=50)return 3;if(creature.clicks>=25)return 2;if(creature.clicks>=10)return 1;return 0}
+function renderMilestone(){
+ const next=earlyMilestones.find(n=>creature.clicks<n);
+ milestoneEl.textContent=next?"🎯 Prochaine découverte : "+next+" clics — "+(next-creature.clicks)+" restants":"✨ Première grande découverte débloquée";
+ environmentUnlock.hidden=creature.clicks<100||!!localStorage.getItem("firstEnvironmentGift");
+}
 function renderCreature(){
- const s=creatureStage(),icons=["🌱","🐣","🧒","🧑"],names=["Petit être","Jeune pousse","Petit explorateur","Explorateur"];
+ const s=creatureStage(),icons=["🌱","🐣","🧒","🧑","🧭"],names=["Petit être","Éveillé","Curieux","Petit explorateur","Explorateur"];
  hungerEl.textContent=String(creature.hunger);careEl.textContent=String(creature.care);growthEl.textContent=String(creature.growth);
  founder.querySelector(".founder-avatar").textContent=icons[s];founderLabel.textContent=names[s];lifeStage.textContent=names[s]+" — stade "+s;
- worldMap.classList.toggle("world-locked",s===0);
+ worldMap.classList.toggle("world-locked",s===0);renderMilestone();
 }
 function getWorldStage(){if(xp>=1000)return{name:"Monde en expansion",stage:4};if(xp>=500)return{name:"Village naissant",stage:3};if(xp>=200)return{name:"Premières fondations",stage:2};if(xp>=50)return{name:"Premières pousses",stage:1};return{name:"Terre vierge",stage:0}}
 function renderWorld(){
@@ -114,8 +122,9 @@ function renderWorld(){
  wildlife.textContent=animals.join(" ");founder.dataset.stage=String(creatureStage());
  worldZones.forEach(z=>{const key=z.dataset.zone;z.dataset.influence=String(worldInfluence[key]||0);z.disabled=creatureStage()===0});
 }
-founder.onclick=()=>{$("btn").click();creature.growth=Math.min(100,creature.growth+1);creature.hunger=Math.max(0,creature.hunger-1);saveCreature();renderCreature();renderWorld();worldHint.textContent="Tu t'occupes du petit être : il grandit peu à peu."};
+founder.onclick=()=>{$("btn").click();creature.clicks++;creature.growth=Math.min(100,creature.clicks);if(creature.clicks%5===0)creature.hunger=Math.max(0,creature.hunger-1);saveCreature();renderCreature();renderWorld();worldHint.textContent="Tu t'occupes du petit être : il grandit peu à peu."};
 feedBtn.onclick=()=>{if(score<2){worldHint.textContent="Il faut 2 points pour trouver de la nourriture.";return}score-=2;creature.hunger=Math.min(100,creature.hunger+12);creature.growth=Math.min(100,creature.growth+4);saveCreature();save();render();renderCreature();renderWorld()};
 careBtn.onclick=()=>{creature.care=Math.min(100,creature.care+10);creature.growth=Math.min(100,creature.growth+3);saveCreature();renderCreature();renderWorld()};
 worldZones.forEach(zone=>zone.onclick=()=>{if(creatureStage()===0)return;const key=zone.dataset.zone;worldInfluence[key]=(worldInfluence[key]||0)+1;localStorage.setItem("worldInfluence",JSON.stringify(worldInfluence));worldHint.textContent="Influence "+zone.textContent.trim()+" : "+worldInfluence[key];$("btn").click();renderWorld()});
+document.querySelectorAll("[data-gift]").forEach(b=>b.onclick=()=>{if(creature.clicks<100)return;const gift=b.dataset.gift;localStorage.setItem("firstEnvironmentGift",gift);environmentUnlock.hidden=true;worldHint.textContent=gift==="tree"?"🌳 Un arbre apparaît près de ton personnage.":gift==="water"?"💧 Une source apparaît dans ce monde encore vierge.":"⛺ Ton personnage possède maintenant son premier abri.";renderWorld()});
 renderCreature();renderWorld();
