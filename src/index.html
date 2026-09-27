@@ -6,10 +6,10 @@
   <main class="game-panel">
 <h1>Click & Build</h1>\n<div id="modeChooser" class="mode-chooser">\n  <span id="modeStatus">Mode : local</span>\n  <button id="localModeBtn" type="button">🏠 Jouer en local</button>\n  <button id="onlineModeBtn" type="button">🌐 Jouer en ligne</button>\n  <div id="modeMessage" aria-live="polite"></div>\n</div>
 <section id="worldPanel" class="world-panel">
-  <div class="world-head"><strong>🌍 Monde 1 — Origine</strong><span id="worldStage">Étape : Terre vierge</span></div>
+  <div class="world-head"><strong>🌍 Monde 1 — Origine</strong><span id="worldStage">Étape : Terre vierge</span><span id="lifeStage">Petit être — stade 0</span></div>
   <div id="worldMap" class="world-map" aria-label="Monde évolutif">
     <button id="founder" class="founder" type="button" aria-label="Personnage fondateur">
-      <span class="founder-avatar">🧍</span><span>Fondateur</span>
+      <span class="founder-avatar">🌱</span><span id="founderLabel">Petit être</span>
     </button>
     <div id="wildlife" class="wildlife" aria-label="Faune du monde"></div>
     <button class="world-zone zone-nature" data-zone="nature" type="button">🌱<span>Nature</span></button>
@@ -17,7 +17,16 @@
     <button class="world-zone zone-build" data-zone="build" type="button">🪵<span>Construction</span></button>
     <button class="world-zone zone-energy" data-zone="energy" type="button">✨<span>Énergie</span></button>
   </div>
-  <div id="worldHint">Clique dans une zone du monde pour orienter son développement.</div>
+  <div id="needsPanel" class="needs-panel">
+    <span>🍎 Faim <b id="hunger">50</b>/100</span>
+    <span>💖 Bien-être <b id="care">50</b>/100</span>
+    <span>🌟 Croissance <b id="growth">0</b>/100</span>
+  </div>
+  <div class="care-actions">
+    <button id="feedBtn" type="button">🍎 Nourrir</button>
+    <button id="careBtn" type="button">💖 S'occuper de lui</button>
+  </div>
+  <div id="worldHint">Au commencement, prends soin du petit être. Le monde naîtra autour de lui.</div>
 </section>
 <div id="score">0</div>
 <div id="xpDisplay">XP : 0</div>
