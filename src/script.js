@@ -95,8 +95,8 @@ renderMode();
 
 // MONDE 1 — PROTOTYPE ÉVOLUTIF
 const worldStage=$("worldStage"),worldMap=$("worldMap"),worldHint=$("worldHint");
-const worldZones=[...document.querySelectorAll(".world-zone")];
-let worldInfluence=JSON.parse(localStorage.getItem("worldInfluence")||'{"nature":0,"build":0,"energy":0}');
+const worldZones=[...document.querySelectorAll(".world-zone")],founder=$("founder"),wildlife=$("wildlife");
+let worldInfluence=JSON.parse(localStorage.getItem("worldInfluence")||'{"nature":0,"animals":0,"build":0,"energy":0}');
 function getWorldStage(){
  if(xp>=1000)return {name:"Monde en expansion",stage:4};
  if(xp>=500)return {name:"Village naissant",stage:3};
@@ -106,6 +106,14 @@ function getWorldStage(){
 }
 function renderWorld(){
  const w=getWorldStage();worldStage.textContent="Étape : "+w.name;worldMap.dataset.stage=String(w.stage);
+ const animalPower=worldInfluence.animals||0,naturePower=worldInfluence.nature||0;
+ const animals=[];
+ if(xp>=50 && naturePower>=1)animals.push("🐦");
+ if(xp>=200 && animalPower>=2)animals.push("🐇");
+ if(xp>=500 && animalPower>=4)animals.push("🦌");
+ if(xp>=1000 && animalPower>=7)animals.push("🐎");
+ wildlife.textContent=animals.join(" ");
+ founder.dataset.stage=String(w.stage);
  worldZones.forEach(z=>{const key=z.dataset.zone;z.dataset.influence=String(worldInfluence[key]||0)});
 }
 worldZones.forEach(zone=>zone.onclick=()=>{
@@ -115,3 +123,5 @@ worldZones.forEach(zone=>zone.onclick=()=>{
  $("btn").click();renderWorld();
 });
 renderWorld();
+
+founder.onclick=()=>{$("btn").click();worldHint.textContent="Le fondateur agit : chaque clic fait progresser le monde.";renderWorld()};
