@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
   <head>
     <meta charset="UTF-8">
-    <title>Untitled</title>
+    <title>Click & Build</title>
     <link rel="stylesheet" href="./style.css">
 
   </head>
     
   <body>
-  <h1>Click & Build</h1>
+<div class="game-layout">
+  <aside class="ad-panel ad-left" aria-label="Publicité gauche">
+    <span>PUBLICITÉ</span>
+  </aside>
+
+  <main class="game-panel">
+<h1>Click & Build</h1>
 <div id="score">0</div>
 
 <div id="timer">Temps : 00:00</div>
@@ -54,7 +60,14 @@
 </audio>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-    <script  src="./script.js"></script>
+  </main>
+
+  <aside class="ad-panel ad-right" aria-label="Publicité droite">
+    <span>PUBLICITÉ</span>
+  </aside>
+</div>
+
+    <script src="./script.js"></script>
 
   </body>
   
