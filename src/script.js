@@ -93,35 +93,29 @@ onlineModeBtn.onclick=()=>{playMode="online";localStorage.setItem("playMode",pla
 renderMode();
 
 
-// MONDE 1 — PROTOTYPE ÉVOLUTIF
-const worldStage=$("worldStage"),worldMap=$("worldMap"),worldHint=$("worldHint");
+// MONDE 1 — ORIGINE VIVANTE
+const worldStage=$("worldStage"),worldMap=$("worldMap"),worldHint=$("worldHint"),lifeStage=$("lifeStage");
 const worldZones=[...document.querySelectorAll(".world-zone")],founder=$("founder"),wildlife=$("wildlife");
+const hungerEl=$("hunger"),careEl=$("care"),growthEl=$("growth"),feedBtn=$("feedBtn"),careBtn=$("careBtn"),founderLabel=$("founderLabel");
 let worldInfluence=JSON.parse(localStorage.getItem("worldInfluence")||'{"nature":0,"animals":0,"build":0,"energy":0}');
-function getWorldStage(){
- if(xp>=1000)return {name:"Monde en expansion",stage:4};
- if(xp>=500)return {name:"Village naissant",stage:3};
- if(xp>=200)return {name:"Premières fondations",stage:2};
- if(xp>=50)return {name:"Premières pousses",stage:1};
- return {name:"Terre vierge",stage:0};
+let creature=JSON.parse(localStorage.getItem("creatureState")||'{"hunger":50,"care":50,"growth":0}');
+function saveCreature(){localStorage.setItem("creatureState",JSON.stringify(creature))}
+function creatureStage(){if(creature.growth>=75)return 3;if(creature.growth>=40)return 2;if(creature.growth>=15)return 1;return 0}
+function renderCreature(){
+ const s=creatureStage(),icons=["🌱","🐣","🧒","🧑"],names=["Petit être","Jeune pousse","Petit explorateur","Explorateur"];
+ hungerEl.textContent=String(creature.hunger);careEl.textContent=String(creature.care);growthEl.textContent=String(creature.growth);
+ founder.querySelector(".founder-avatar").textContent=icons[s];founderLabel.textContent=names[s];lifeStage.textContent=names[s]+" — stade "+s;
+ worldMap.classList.toggle("world-locked",s===0);
 }
+function getWorldStage(){if(xp>=1000)return{name:"Monde en expansion",stage:4};if(xp>=500)return{name:"Village naissant",stage:3};if(xp>=200)return{name:"Premières fondations",stage:2};if(xp>=50)return{name:"Premières pousses",stage:1};return{name:"Terre vierge",stage:0}}
 function renderWorld(){
  const w=getWorldStage();worldStage.textContent="Étape : "+w.name;worldMap.dataset.stage=String(w.stage);
- const animalPower=worldInfluence.animals||0,naturePower=worldInfluence.nature||0;
- const animals=[];
- if(xp>=50 && naturePower>=1)animals.push("🐦");
- if(xp>=200 && animalPower>=2)animals.push("🐇");
- if(xp>=500 && animalPower>=4)animals.push("🦌");
- if(xp>=1000 && animalPower>=7)animals.push("🐎");
- wildlife.textContent=animals.join(" ");
- founder.dataset.stage=String(w.stage);
- worldZones.forEach(z=>{const key=z.dataset.zone;z.dataset.influence=String(worldInfluence[key]||0)});
+ const animals=[];if(xp>=50&&(worldInfluence.nature||0)>=1)animals.push("🐦");if(xp>=200&&(worldInfluence.animals||0)>=2)animals.push("🐇");if(xp>=500&&(worldInfluence.animals||0)>=4)animals.push("🦌");if(xp>=1000&&(worldInfluence.animals||0)>=7)animals.push("🐎");
+ wildlife.textContent=animals.join(" ");founder.dataset.stage=String(creatureStage());
+ worldZones.forEach(z=>{const key=z.dataset.zone;z.dataset.influence=String(worldInfluence[key]||0);z.disabled=creatureStage()===0});
 }
-worldZones.forEach(zone=>zone.onclick=()=>{
- const key=zone.dataset.zone;worldInfluence[key]=(worldInfluence[key]||0)+1;
- localStorage.setItem("worldInfluence",JSON.stringify(worldInfluence));
- worldHint.textContent="Influence "+zone.textContent.trim()+" : "+worldInfluence[key]+" — cette orientation servira aux futures branches du monde.";
- $("btn").click();renderWorld();
-});
-renderWorld();
-
-founder.onclick=()=>{$("btn").click();worldHint.textContent="Le fondateur agit : chaque clic fait progresser le monde.";renderWorld()};
+founder.onclick=()=>{$("btn").click();creature.growth=Math.min(100,creature.growth+1);creature.hunger=Math.max(0,creature.hunger-1);saveCreature();renderCreature();renderWorld();worldHint.textContent="Tu t'occupes du petit être : il grandit peu à peu."};
+feedBtn.onclick=()=>{if(score<2){worldHint.textContent="Il faut 2 points pour trouver de la nourriture.";return}score-=2;creature.hunger=Math.min(100,creature.hunger+12);creature.growth=Math.min(100,creature.growth+4);saveCreature();save();render();renderCreature();renderWorld()};
+careBtn.onclick=()=>{creature.care=Math.min(100,creature.care+10);creature.growth=Math.min(100,creature.growth+3);saveCreature();renderCreature();renderWorld()};
+worldZones.forEach(zone=>zone.onclick=()=>{if(creatureStage()===0)return;const key=zone.dataset.zone;worldInfluence[key]=(worldInfluence[key]||0)+1;localStorage.setItem("worldInfluence",JSON.stringify(worldInfluence));worldHint.textContent="Influence "+zone.textContent.trim()+" : "+worldInfluence[key];$("btn").click();renderWorld()});
+renderCreature();renderWorld();
