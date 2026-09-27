@@ -55,3 +55,53 @@ body{margin:0;font-family:Segoe UI;text-align:center;background:linear-gradient(
   font-size: 18px;
   margin-bottom: 8px;
 }
+
+.game-layout {
+  width: min(1400px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) minmax(0, 1fr) minmax(180px, 280px);
+  gap: 24px;
+  align-items: start;
+}
+
+.game-panel {
+  min-width: 0;
+}
+
+.ad-panel {
+  box-sizing: border-box;
+  min-height: 600px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 24px;
+}
+
+.ad-panel span {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  opacity: 0.75;
+  writing-mode: vertical-rl;
+}
+
+body.light .ad-panel {
+  border-color: rgba(0, 0, 0, 0.22);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 900px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+    width: min(680px, calc(100% - 24px));
+  }
+
+  .ad-panel {
+    display: none;
+  }
+}
