@@ -131,3 +131,7 @@ body.light .mode-chooser button.mode-active{outline-color:rgba(0,0,0,.45)}
 .wildlife{grid-column:1/-1;min-height:34px;font-size:27px;letter-spacing:8px}
 .zone-animals{background:rgba(90,65,35,.28)!important}
 @media(max-width:600px){.founder,.wildlife{grid-column:1}}
+
+.needs-panel{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:10px 0;font-size:14px}.care-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+#lifeStage{font-size:13px;opacity:.9}.world-locked .world-zone{opacity:.38;filter:grayscale(.7);cursor:not-allowed}
+.founder[data-stage="0"] .founder-avatar{font-size:34px}.founder[data-stage="1"] .founder-avatar{font-size:39px}.founder[data-stage="2"] .founder-avatar{font-size:44px}.founder[data-stage="3"] .founder-avatar{font-size:50px}
