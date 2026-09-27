@@ -75,3 +75,18 @@ $("shareBtn").onclick=()=>{const text=`J'ai atteint ${score} pts et ${xp} XP sur
 themeBtn.onclick=()=>{document.body.classList.toggle("light");const light=document.body.classList.contains("light");localStorage.setItem("theme",light?"light":"dark");themeBtn.textContent=light?"🌞 Thème clair":"🌙 Thème sombre"};
 
 setInterval(()=>{cpsSamples.push(clicksThisSecond);if(cpsSamples.length>3)cpsSamples.shift();clicksThisSecond=0;cps=Math.round((cpsSamples.reduce((a,b)=>a+b,0)/cpsSamples.length)*10)/10;if(cpsLive)cpsLive.innerText="CPS : "+cps},1000);
+
+
+// CHOIX LOCAL / EN LIGNE
+const localModeBtn=$("localModeBtn"), onlineModeBtn=$("onlineModeBtn"), modeStatus=$("modeStatus"), modeMessage=$("modeMessage");
+let playMode=localStorage.getItem("playMode")||"local";
+function renderMode(){
+  const local=playMode==="local";
+  modeStatus.textContent=local?"Mode : local":"Mode : en ligne";
+  localModeBtn.classList.toggle("mode-active",local);
+  onlineModeBtn.classList.toggle("mode-active",!local);
+  modeMessage.textContent=local?"Progression sauvegardée sur cet appareil.":"Mode en ligne sélectionné — connexion .io bientôt disponible.";
+}
+localModeBtn.onclick=()=>{playMode="local";localStorage.setItem("playMode",playMode);renderMode()};
+onlineModeBtn.onclick=()=>{playMode="online";localStorage.setItem("playMode",playMode);renderMode()};
+renderMode();
