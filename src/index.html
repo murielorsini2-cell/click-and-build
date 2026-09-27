@@ -5,7 +5,17 @@
 
   <main class="game-panel">
 <h1>Click & Build</h1>\n<div id="modeChooser" class="mode-chooser">\n  <span id="modeStatus">Mode : local</span>\n  <button id="localModeBtn" type="button">🏠 Jouer en local</button>\n  <button id="onlineModeBtn" type="button">🌐 Jouer en ligne</button>\n  <div id="modeMessage" aria-live="polite"></div>\n</div>
+<section id="worldPanel" class="world-panel">
+  <div class="world-head"><strong>🌍 Monde 1 — Origine</strong><span id="worldStage">Étape : Terre vierge</span></div>
+  <div id="worldMap" class="world-map" aria-label="Monde évolutif">
+    <button class="world-zone zone-nature" data-zone="nature" type="button">🌱<span>Nature</span></button>
+    <button class="world-zone zone-build" data-zone="build" type="button">🪵<span>Construction</span></button>
+    <button class="world-zone zone-energy" data-zone="energy" type="button">✨<span>Énergie</span></button>
+  </div>
+  <div id="worldHint">Clique dans une zone du monde pour orienter son développement.</div>
+</section>
 <div id="score">0</div>
+<div id="xpDisplay">XP : 0</div>
 
 <div id="timer">Temps : 00:00</div>
 <div id="cpsLive">CPS : 0</div>
