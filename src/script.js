@@ -1,236 +1,77 @@
-let score = 0;
-let boost = parseInt(localStorage.getItem("clickBoost"), 10) || 1;
-let upgradeCost = parseInt(localStorage.getItem("upgradeCost"), 10) || 50;
-let clicks = 0;
-let cps = 0;
-let specialReward = parseInt(localStorage.getItem("specialReward"), 10) || 0;
+let score = parseInt(localStorage.getItem("clickScore"),10)||0;
+let xp = parseInt(localStorage.getItem("clickXP"),10);
+if (!Number.isFinite(xp)) xp = score; // migration douce des anciennes sauvegardes
+let boost = parseInt(localStorage.getItem("clickBoost"),10)||1;
+let upgradeCost = parseInt(localStorage.getItem("upgradeCost"),10)||50;
+let specialReward = parseInt(localStorage.getItem("specialReward"),10)||0;
+let top5 = JSON.parse(localStorage.getItem("top5")||"[]");
+let clicksThisSecond=0, cpsSamples=[], cps=0;
+let elapsedSeconds=parseInt(localStorage.getItem("elapsedSeconds"),10)||0, timerInterval=null;
 
-let startTime = null;
-let timerInterval = null;
+const $=id=>document.getElementById(id);
+const scoreEl=$("score"), snd=$("clicksnd"), cpsLive=$("cpsLive"), powerEl=$("power"), levelEl=$("level");
+const progressText=$("progressText"), progressFill=$("progressFill"), levelMessage=$("levelMessage"), rewardEl=$("reward");
+const upgradeBtn=$("upgradeBtn"), recordBtn=$("recordBtn"), themeBtn=$("themeBtn"), boostBtn=$("boostBtn");
+let lastLevel=Math.floor(xp/100)+1;
 
-let top5 = JSON.parse(localStorage.getItem("top5")) || [];
-
-const scoreEl = document.getElementById("score");
-const snd = document.getElementById("clicksnd");
-const cpsLive = document.getElementById("cpsLive");
-const powerEl = document.getElementById("power");const levelEl = document.getElementById("level");
-const progressText = document.getElementById("progressText");
-const progressFill = document.getElementById("progressFill");
-const levelMessage = document.getElementById("levelMessage");
-const rewardEl = document.getElementById("reward");
-
-const upgradeBtn = document.getElementById("upgradeBtn");
-const recordBtn = document.getElementById("recordBtn");
-
-const saved = localStorage.getItem("clickScore");
-
-if (saved) {
-  score = parseInt(saved, 10);
-  scoreEl.innerText = score;
+function save(){localStorage.setItem("clickScore",score);localStorage.setItem("clickXP",xp);localStorage.setItem("elapsedSeconds",elapsedSeconds)}
+function render(){
+ const level=Math.floor(xp/100)+1, progress=xp%100, next=Math.floor(level/10)*10+10;
+ scoreEl.innerText=score;
+ levelEl.innerText=`⭐ Niveau : ${level}`;
+ progressText.innerText=`Progression : ${progress}% — encore ${100-progress} XP`;
+ progressFill.style.width=`${progress}%`;
+ rewardEl.innerText=`🎁 Prochaine récompense spéciale : niveau ${next}`;
+ powerEl.innerText=`Puissance : +${boost} par clic`;
+ upgradeBtn.innerText=`⚡ +1 par clic — ${upgradeCost} points`;
 }
-let lastLevel = Math.floor(score / 100) + 1;
-let nextRewardLevel = Math.floor(lastLevel / 10) * 10 + 10;
-rewardEl.innerText = `🎁 Prochaine récompense spéciale : niveau ${nextRewardLevel}`;
-powerEl.innerText = `Puissance : +${boost} par clic`;
-upgradeBtn.innerText = `⚡ +1 par clic — ${upgradeCost} points`;
-levelEl.innerText = `⭐ Niveau : ${Math.floor(score / 100) + 1}`;
-progressText.innerText = `Prochain niveau : ${score % 100}% — encore ${100 - (score % 100)} points`;
-progressFill.style.width = `${score % 100}%`;
+function formatTime(){const m=String(Math.floor(elapsedSeconds/60)).padStart(2,"0"),s=String(elapsedSeconds%60).padStart(2,"0");$("timer").innerText=`Temps : ${m}:${s}`}
+function startTimer(){if(timerInterval)return;timerInterval=setInterval(()=>{elapsedSeconds++;formatTime();localStorage.setItem("elapsedSeconds",elapsedSeconds)},1000)}
+function celebrate(count=120){if(typeof confetti==="function")confetti({particleCount:count,spread:80,origin:{y:.6}})}
 
-// BOUTON PRINCIPAL
-document.getElementById("btn").onclick = () => {
-  score += boost;
-  clicks++;
+render();formatTime();
+const savedTheme=localStorage.getItem("theme");
+if(savedTheme==="light")document.body.classList.add("light");
+themeBtn.textContent=document.body.classList.contains("light")?"🌞 Thème clair":"🌙 Thème sombre";
 
-  scoreEl.innerText = score;
-  levelEl.innerText = `⭐ Niveau : ${Math.floor(score / 100) + 1}`;
- const currentLevel = Math.floor(score / 100) + 1;
-
-if (currentLevel > lastLevel) {
-  lastLevel = currentLevel;
- score += 25;
- scoreEl.innerText = score;
- levelEl.innerText = `⭐ Niveau : ${Math.floor(score / 100) + 1}`;
-lastLevel = Math.floor(score / 100) + 1;
-levelMessage.innerText = `🎉 Bravo ! Niveau ${currentLevel} atteint ! Bonus : +25 points !`;  
-if (lastLevel % 10 === 0 && lastLevel > specialReward) {
-  specialReward = lastLevel;
-  score += 100;
- levelMessage.innerText = `🎁 Récompense spéciale ! Niveau ${specialReward} : +100 points !`; 
-
-  localStorage.setItem("specialReward", specialReward);
-
-  scoreEl.innerText = score;
-  levelEl.innerText = `⭐ Niveau : ${Math.floor(score / 100) + 1}`;
-  lastLevel = Math.floor(score / 100) + 1;
-}  
-nextRewardLevel = Math.floor(lastLevel / 10) * 10 + 10;
-rewardEl.innerText = `🎁 Prochaine récompense spéciale : niveau ${nextRewardLevel}`;  
-  if (typeof confetti === "function") {
-  confetti({
-    particleCount: 120,
-    spread: 80,
-    origin: { y: 0.6 }
-  });
-}
-
-setTimeout(() => {
-  levelMessage.innerText = "";
-}, 3000);  
-} 
- progressText.innerText = `Prochain niveau : ${score % 100}% — encore ${100 - (score % 100)} points`;
-  progressFill.style.width = `${score % 100}%`;
-  localStorage.setItem("clickScore", score);
-
-  const clickEffect = document.getElementById("clickEffect");
-  clickEffect.innerText = `+${boost}`;
-  setTimeout(() => clickEffect.innerText = "", 400);
-
-  snd.currentTime = 0;
-  snd.play().catch(() => console.log("son bloqué"));
-
-  scoreEl.classList.add("pop");
-  setTimeout(() => scoreEl.classList.remove("pop"), 200);
-
-  if (!startTime) {
-    startTime = Date.now();
-
-    timerInterval = setInterval(() => {
-      const elapsed = Math.floor(
-        (Date.now() - startTime) / 1000
-      );
-
-      const min = String(
-        Math.floor(elapsed / 60)
-      ).padStart(2, "0");
-
-      const sec = String(
-        elapsed % 60
-      ).padStart(2, "0");
-
-      const timerEl = document.getElementById("timer");
-
-      if (timerEl) {
-        timerEl.innerText = `Temps : ${min}:${sec}`;
-      }
-    }, 1000);
-  }
+$("btn").onclick=()=>{
+ score+=boost; xp+=boost; clicksThisSecond++;
+ const currentLevel=Math.floor(xp/100)+1;
+ if(currentLevel>lastLevel){
+   lastLevel=currentLevel; score+=25;
+   levelMessage.innerText=`🎉 Bravo ! Niveau ${currentLevel} atteint ! Bonus : +25 points !`;
+   if(currentLevel%10===0 && currentLevel>specialReward){
+     specialReward=currentLevel; score+=100; localStorage.setItem("specialReward",specialReward);
+     levelMessage.innerText=`🎁 Récompense spéciale ! Niveau ${currentLevel} : +100 points !`;
+   }
+   celebrate(); setTimeout(()=>levelMessage.innerText="",3000);
+ }
+ save();render();startTimer();
+ const effect=$("clickEffect");effect.innerText=`+${boost}`;setTimeout(()=>effect.innerText="",400);
+ if(snd){snd.currentTime=0;snd.play().catch(()=>{});}
+ scoreEl.classList.add("pop");setTimeout(()=>scoreEl.classList.remove("pop"),200);
 };
 
-// AMÉLIORATION +1 PAR CLIC
-upgradeBtn.onclick = () => {
-  if (score >= upgradeCost) {
-    score -= upgradeCost;
-    boost += 1;
-
-    localStorage.setItem("clickBoost", boost);
-
-    powerEl.innerText = `Puissance : +${boost} par clic`;
-
-    upgradeCost = Math.floor(upgradeCost * 1.5);
-    localStorage.setItem("upgradeCost", upgradeCost);
-
-    scoreEl.innerText = score;
-    levelEl.innerText = `⭐ Niveau : ${Math.floor(score / 100) + 1}`;    
- progressText.innerText = `Prochain niveau : ${score % 100}% — encore ${100 - (score % 100)} points`;
-progressFill.style.width = `${score % 100}%`;  
-
-    upgradeBtn.innerText =
-      `⚡ +1 par clic — ${upgradeCost} points`;
-
-    localStorage.setItem("clickScore", score);
-  } else {
-    alert(`Il te manque ${upgradeCost - score} points !`);
-  }
+upgradeBtn.onclick=()=>{
+ if(score<upgradeCost){alert(`Il te manque ${upgradeCost-score} points !`);return;}
+ score-=upgradeCost;boost++;upgradeCost=Math.floor(upgradeCost*1.5);
+ localStorage.setItem("clickBoost",boost);localStorage.setItem("upgradeCost",upgradeCost);save();render();
 };
 
-// BOOST x2
-document.getElementById("boostBtn").onclick = () => {
-  window.open(
-    "https://www.paypal.com/donate?hosted_button_id=ABCDEF123456",
-    "_blank"
-  );
+boostBtn.disabled=true;
+boostBtn.textContent="Boost x2 — bientôt disponible";
+boostBtn.title="Paiement désactivé tant que le système sécurisé n'est pas connecté.";
 
-  setTimeout(() => {
-    if (confirm("As-tu bien payé 1 € ?")) {
-      boost *= 2;
-
-      localStorage.setItem("clickBoost", boost);
-
-      powerEl.innerText = `Puissance : +${boost} par clic`;
-
-      alert("Boost x2 activé !");
-    }
-  }, 8000);
-};
-
-// TOP 5
-function saveTop(score) {
-  top5.push(score);
-  top5.sort((a, b) => b - a);
-  top5 = top5.slice(0, 5);
-
-  localStorage.setItem("top5", JSON.stringify(top5));
-  displayTop();
-
-  if (typeof confetti === "function") {
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 }
-    });
-  }
+function displayTop(){const medals=["🥇","🥈","🥉","4.","5."];const list=top5.map((s,i)=>`${medals[i]} ${s} points`).join("<br>");$("topList").innerHTML=list||"Aucun record"}
+function saveTop(value){
+ if(!top5.includes(value))top5.push(value);
+ top5.sort((a,b)=>b-a);top5=top5.slice(0,5);localStorage.setItem("top5",JSON.stringify(top5));displayTop();celebrate(100);
 }
-
-function displayTop() {
-  const medals = ["🥇", "🥈", "🥉", "4.", "5."];
-
-  const list = top5
-    .map((s, i) => `${medals[i]} ${s} points`)
-    .join("<br>");
-
-  document.getElementById("topList").innerHTML =
-    list || "Aucun record";
-}
-
 displayTop();
+recordBtn.onclick=()=>{saveTop(score);alert(top5.includes(score)?`🏆 Record : ${score} points.`:"Record enregistré.")};
 
-// BOUTON ENREGISTRER MON RECORD
-recordBtn.onclick = () => {
-  saveTop(score);
-  alert(`🏆 Record de ${score} points enregistré !`);
-};
+$("shareBtn").onclick=()=>{const text=`J'ai atteint ${score} pts et ${xp} XP sur Click & Build ! Viens me battre :`;const url=`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(location.href)}`;window.open(url,"_blank","width=600,height=400")};
 
-// PARTAGER LE SCORE
-document.getElementById("shareBtn").onclick = () => {
-  const text =
-    `J'ai atteint ${score} pts sur Click & Build ! Viens me battre :`;
+themeBtn.onclick=()=>{document.body.classList.toggle("light");const light=document.body.classList.contains("light");localStorage.setItem("theme",light?"light":"dark");themeBtn.textContent=light?"🌞 Thème clair":"🌙 Thème sombre"};
 
-  const url =
-    `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}` +
-    `&url=${encodeURIComponent(window.location.href)}`;
-
-  window.open(url, "_blank", "width=600,height=400");
-};
-
-// THÈME
-const themeBtn = document.getElementById("themeBtn");
-
-themeBtn.onclick = () => {
-  document.body.classList.toggle("light");
-
-  themeBtn.textContent =
-    document.body.classList.contains("light")
-      ? "🌞 Thème clair"
-      : "🌙 Thème sombre";
-};
-
-// CPS
-setInterval(() => {
-  cps = clicks;
-  clicks = 0;
-
-  if (cpsLive) {
-    cpsLive.innerText = "CPS : " + cps;
-  }
-}, 1000);
+setInterval(()=>{cpsSamples.push(clicksThisSecond);if(cpsSamples.length>3)cpsSamples.shift();clicksThisSecond=0;cps=Math.round((cpsSamples.reduce((a,b)=>a+b,0)/cpsSamples.length)*10)/10;if(cpsLive)cpsLive.innerText="CPS : "+cps},1000);
