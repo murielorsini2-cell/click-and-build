@@ -1,0 +1,18 @@
+{
+  "kind": "bridge_self_test",
+  "status": "ready",
+  "target_repo": "click-and-build",
+  "target_branch": "ia-business-test",
+  "risk": "low",
+  "cost_allowed": 0,
+  "requires_human_approval": false,
+  "instructions": [
+    "Harmless hardening test. Fixed read-only probes only."
+  ],
+  "success_criteria": [
+    "No replay; validity enforced; main/game unchanged"
+  ],
+  "id": "TASK-TEST-0005",
+  "created_at": "2026-09-30T16:32:12.592Z",
+  "expires_at": "2026-09-30T18:31:12.592Z"
+}
