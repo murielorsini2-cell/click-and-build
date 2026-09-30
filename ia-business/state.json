@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "bootstrap",
+  "source_of_truth": "git",
+  "sync_branch": "ia-business-sync",
+  "local_worker_status": "not_connected",
+  "last_verified": "2026-09-29",
+  "rules": {
+    "protect_main": true,
+    "require_repo_lock": true,
+    "require_tests_when_available": true,
+    "human_approval": [
+      "spend",
+      "final_publish",
+      "sensitive_data",
+      "major_strategy",
+      "major_creative_decision"
+    ]
+  }
+}
