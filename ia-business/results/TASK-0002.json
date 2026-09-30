@@ -2,114 +2,587 @@
   "schema_version": 1,
   "id": "TASK-0002",
   "kind": "install_local_worker_preprod",
-  "status": "blocked",
-  "final_status": "blocked",
-  "verified_at_utc": "2026-09-30T02:17:39.6915335Z",
+  "status": "completed",
+  "final_status": "passed",
+  "verified_at_utc": "2026-09-30T02:34:17.791Z",
   "repository": "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
   "branch_used": "ia-business-test",
-  "HEAD": "b526ef57418be05ba9f10cfa8f6b75724d216a4e",
-  "source_sync_commit": "4f8dc65aa60a9f306e570555368dc054a6236fdf",
+  "HEAD": "2ffd5e4aef2fea801625625d4f1e54e40cc901a1",
   "main_before": "b526ef57418be05ba9f10cfa8f6b75724d216a4e",
   "main_after": "b526ef57418be05ba9f10cfa8f6b75724d216a4e",
-  "remote_main_before": "b526ef57418be05ba9f10cfa8f6b75724d216a4e\trefs/heads/main",
   "working_tree": "clean",
-  "gameplay_changes": [],
-  "cost": 0,
-  "blocker": {
-    "command": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -NonInteractive -File .\\work\\worker.ps1 -Mode SelfTest",
-    "category": "security_policy",
-    "exit_code": 1,
-    "guardrail": "If any unexpected permission, credential, administrator, security, or destructive prompt is required, stop and report blocked instead of bypassing it.",
-    "error": "PSSecurityException / UnauthorizedAccess: execution of scripts is disabled on this system",
-    "scope": "Observed during the pre-install self-test in the Codex execution environment; actual scheduled-context policy was not assumed or bypassed"
-  },
-  "preparation": {
-    "intended_interval": "15 minutes while current user is logged in",
-    "code": "Drafted in Codex work directory only; not installed, committed or executed successfully",
-    "runtime": "Not installed",
-    "allowlist": "bridge_self_test only in draft"
-  },
+  "source_code_commit": "2ffd5e4aef2fea801625625d4f1e54e40cc901a1",
+  "source_files": [
+    "ia-business/worker/worker.cjs",
+    "ia-business/worker/README.md"
+  ],
+  "runtime_directory": "C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime",
   "trigger": {
-    "installed": false,
     "name": "IA Business - click-and-build - queue worker",
-    "enabled": false,
-    "state": "not_installed"
+    "enabled": true,
+    "state": 3,
+    "user": "DESKTOP-P8FVPTN\\Muriel",
+    "administrator": false,
+    "interval": "PT15M",
+    "next_run": "09/29/2026 22:44:06",
+    "action": "C:\\Users\\Muriel\\AppData\\Local\\hermes\\node\\node.exe",
+    "arguments": "\"C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build\\ia-business\\worker\\worker.cjs\" once \"C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\config.json\"",
+    "logon_type": 3,
+    "run_level": 0,
+    "last_result": 0,
+    "last_run": "09/29/2026 22:33:49"
   },
   "worker_process": {
-    "pid": null,
-    "state": "not_running"
+    "last_pid": 36956,
+    "state": "exited successfully; scheduled, no resident process"
+  },
+  "versions": {
+    "node": "v22.23.2",
+    "npm": "10.9.8",
+    "git": "git version 2.53.0.windows.3"
   },
   "tests": {
-    "TASK_0002_visible": "passed",
-    "scheduler_read_access": "passed",
-    "working_tree": "clean",
-    "main": "unchanged",
-    "branch": "passed",
-    "cloud_queue_fetch": "passed",
-    "policy_self_test": "blocked before script execution",
-    "result_delivery": "pending containing commit; post-push verification recorded separately",
-    "persistent_trigger": "not_installed",
-    "repository": "passed"
+    "policy_and_lock": {
+      "status": "passed",
+      "tests": [
+        "allowlisted_read_only_task",
+        "reject_requires_human_approval_true",
+        "reject_requires_human_approval_undefined",
+        "reject_cost_allowed_1",
+        "reject_cost_allowed_\"0\"",
+        "reject_cost_allowed_undefined",
+        "reject_risk_\"high\"",
+        "reject_kind_\"shell\"",
+        "reject_target_branch_\"main\"",
+        "reject_target_repo_\"wrong\"",
+        "reject_status_\"pending\"",
+        "reject_id_\"../../escape\"",
+        "reject_command_\"calc.exe\"",
+        "reject_commands_[]",
+        "path_traversal_rejected",
+        "concurrent_lock_rejected",
+        "lock_released_and_restartable",
+        "dead_process_lock_recovery",
+        "malformed_lock_fails_closed"
+      ]
+    },
+    "queue_dry_run": {
+      "status": "passed",
+      "mode": "dry-run",
+      "pid": 37712,
+      "source_sync_commit": "4896ee3012edfae4e2f607c0ec0208bfb0ddc7f7",
+      "executed": null,
+      "tasks": [
+        {
+          "id": "TASK-0001",
+          "kind": "bridge_self_test",
+          "status": "ready",
+          "result_exists": true,
+          "rejection": null
+        },
+        {
+          "id": "TASK-0002",
+          "kind": "install_local_worker_preprod",
+          "status": "ready",
+          "result_exists": true,
+          "rejection": "kind_not_allowlisted"
+        }
+      ],
+      "main_unchanged": true,
+      "working_tree": "clean",
+      "head": "63b2f5e399b77a593568db8ea518b921dd1bc382"
+    },
+    "scheduled_runs": [
+      {
+        "run": 1,
+        "last_result": 0,
+        "state": 3,
+        "worker_pid": 16064,
+        "executed": "TASK-TEST-0002",
+        "last_run": "09/29/2026 22:32:59",
+        "source_sync_commit": "ded402435d8080955907ed8d213950c399cab2f7"
+      },
+      {
+        "run": 2,
+        "last_result": 0,
+        "state": 3,
+        "worker_pid": 36956,
+        "executed": null,
+        "last_run": "09/29/2026 22:33:49",
+        "source_sync_commit": "a43ab1c80aac3c0cecafbf2e0878366f873c3969"
+      }
+    ],
+    "concurrent_process": {
+      "status": "passed",
+      "test": "separate process rejected while exclusive lock held",
+      "parent_pid": 35424,
+      "child_pid": 26032,
+      "child_status": "locked"
+    },
+    "integration_task": "TASK-TEST-0002",
+    "execution_count": 1,
+    "result_delivery": [
+      {
+        "commit": "a43ab1c80aac3c0cecafbf2e0878366f873c3969",
+        "blob": "3f94fcd112f4d5d7ed2a4e5b179e2f896f41421c",
+        "status": "verified"
+      }
+    ],
+    "main_unchanged": true,
+    "original_files_sha256_unchanged": true
   },
   "commands_executed": [
     {
-      "result": "Preflight reported LocalMachine RemoteSigned in current shell; does not establish Windows PowerShell child policy",
-      "command": "Get-ExecutionPolicy -List"
+      "command": "git",
+      "args": [
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "exit_code": 0
     },
     {
-      "result": "Read-only current-user scheduler access succeeded",
-      "command": "Schedule.Service Connect and GetTasks(0)"
+      "command": "git",
+      "args": [
+        "symbolic-ref",
+        "--short",
+        "HEAD"
+      ],
+      "exit_code": 0
     },
     {
-      "result": "Executable paths identified",
-      "command": "Get-Command node.exe,npm.cmd,powershell.exe"
+      "command": "git",
+      "args": [
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0
     },
     {
-      "result": "Script execution disabled; halted as required",
-      "exit_code": 1,
-      "command": "powershell.exe -NoProfile -NonInteractive -File .\\work\\worker.ps1 -Mode SelfTest"
+      "command": "git",
+      "args": [
+        "rev-parse",
+        "refs/heads/main"
+      ],
+      "exit_code": 0
     },
     {
-      "exit_code": 0,
-      "command": "git rev-parse --show-toplevel"
+      "command": "git",
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
     },
     {
-      "exit_code": 0,
-      "command": "git symbolic-ref --short HEAD"
+      "command": "git",
+      "args": [
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/main"
+      ],
+      "exit_code": 0
     },
     {
-      "exit_code": 0,
-      "command": "git status --porcelain=v1 --untracked-files=all"
+      "command": "git",
+      "args": [
+        "ls-files"
+      ],
+      "exit_code": 0
     },
     {
-      "exit_code": 0,
-      "command": "git rev-parse HEAD"
+      "command": "git",
+      "args": [
+        "add",
+        "--",
+        "ia-business/worker/worker.cjs",
+        "ia-business/worker/README.md"
+      ],
+      "exit_code": 0
     },
     {
-      "exit_code": 0,
-      "command": "git rev-parse refs/heads/main"
+      "command": "git",
+      "args": [
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit_code": 0
     },
     {
-      "exit_code": 0,
-      "command": "git ls-remote --heads origin refs/heads/main"
+      "command": "git",
+      "args": [
+        "commit",
+        "-m",
+        "Install restricted Node.js IA Business queue worker"
+      ],
+      "exit_code": 0
     },
     {
-      "exit_code": 0,
-      "command": "git fetch --no-tags origin refs/heads/ia-business-sync:refs/remotes/origin/ia-business-sync"
+      "command": "git",
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
     },
     {
-      "exit_code": 0,
-      "command": "git rev-parse origin/ia-business-sync"
+      "command": "git",
+      "args": [
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0
     },
     {
-      "exit_code": 0,
-      "command": "git ls-tree --name-only 4f8dc65aa60a9f306e570555368dc054a6236fdf ia-business/results/TASK-0002.json"
+      "executable": "C:\\Users\\Muriel\\AppData\\Local\\hermes\\node\\node.exe",
+      "arguments": [
+        "ia-business/worker/worker.cjs",
+        "self-test"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "C:\\Users\\Muriel\\AppData\\Local\\hermes\\node\\node.exe",
+      "arguments": [
+        "ia-business/worker/worker.cjs",
+        "dry-run"
+      ],
+      "exit_code": 0
+    },
+    {
+      "operation": "Schedule.Service.RegisterTaskDefinition",
+      "rights": "current user / least privilege",
+      "result": "installed"
+    },
+    {
+      "operation": "Schedule.Service.GetTask.Run",
+      "count": 2,
+      "result": "exit 0 on both runs"
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "symbolic-ref",
+        "--short",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "refs/heads/main"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "fetch",
+        "--no-tags",
+        "origin",
+        "refs/heads/ia-business-sync:refs/remotes/origin/ia-business-sync"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "refs/remotes/origin/ia-business-sync"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "ded402435d8080955907ed8d213950c399cab2f7",
+        "ia-business/queue"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "ded402435d8080955907ed8d213950c399cab2f7",
+        "ia-business/results"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "ded402435d8080955907ed8d213950c399cab2f7:ia-business/queue/TASK-0001.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "ded402435d8080955907ed8d213950c399cab2f7:ia-business/queue/TASK-0002.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "ded402435d8080955907ed8d213950c399cab2f7:ia-business/queue/TASK-TEST-0002.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "ded402435d8080955907ed8d213950c399cab2f7:ia-business/queue/TASK-TEST-0002.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "node.exe",
+      "arguments": [
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "node.exe",
+      "arguments": [
+        "C:\\Users\\Muriel\\AppData\\Local\\hermes\\node\\node_modules\\npm\\bin\\npm-cli.js",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "symbolic-ref",
+        "--short",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "refs/heads/main"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
     }
   ],
+  "automatic_allowlist": [
+    "bridge_self_test"
+  ],
+  "rejected": [
+    "requires_human_approval != false",
+    "cost_allowed != numeric zero",
+    "risk != low",
+    "unknown kind or payload field",
+    "wrong repository or branch",
+    "dirty tree",
+    "source integrity change"
+  ],
   "files_modified": [
+    "ia-business/worker/worker.cjs",
+    "ia-business/worker/README.md",
+    "ia-business/queue/TASK-TEST-0002.json",
+    "ia-business/results/TASK-TEST-0002.json",
     "ia-business/results/TASK-0002.json"
   ],
-  "rollback": "No installed trigger or worker to uninstall. Only draft files remain in the Codex work directory; repository gameplay and main are untouched.",
-  "next_action": "Resolve or explicitly review the observed Windows PowerShell execution-policy restriction before a new authorized installation attempt. No ExecutionPolicy Bypass, elevation to administrator, alternate runtime workaround or policy change was attempted.",
-  "prior_interruption": "Earlier automatic approval review failed due to usage limit. User explicitly requested resume; scheduler preflight then succeeded. Current blocker is the subsequent script execution security failure."
+  "gameplay_files_modified": [],
+  "cost": 0,
+  "security": {
+    "administrator": false,
+    "execution_policy_modified": false,
+    "ps1_worker": false,
+    "ps1_trigger": false,
+    "credentials_in_repo": false,
+    "arbitrary_remote_shell": false
+  },
+  "rollback_commands": [
+    "schtasks.exe /Change /TN \"IA Business - click-and-build - queue worker\" /DISABLE",
+    "schtasks.exe /End /TN \"IA Business - click-and-build - queue worker\"",
+    "schtasks.exe /Delete /TN \"IA Business - click-and-build - queue worker\" /F"
+  ],
+  "limitations": [
+    "Windows user must be logged in and PC available",
+    "Only bridge_self_test is automatically executable; new kinds need reviewed code",
+    "Blocked/completed result IDs are not replayed",
+    "No orchestrator acknowledgement claimed"
+  ],
+  "previous_blocker": "Resolved by user-authorized Node.js implementation, without changing PowerShell security settings.",
+  "delivery_note": "Only this result path is in the containing final synchronization commit; post-push blob readback verified separately."
 }
