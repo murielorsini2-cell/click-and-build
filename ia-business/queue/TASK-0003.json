@@ -1,20 +1,22 @@
 {
-  "schema_version": 1,
   "id": "TASK-0003",
   "kind": "bridge_self_test",
   "status": "ready",
-  "repository": "murielorsini2-cell/click-and-build",
+  "target_repo": "click-and-build",
   "target_branch": "ia-business-test",
-  "requires_human_approval": false,
-  "cost_allowed": 0,
   "risk": "low",
-  "command": "bridge_self_test",
-  "purpose": "Autonomous pre-production bridge test deposited from ChatGPT/cloud. Verify the scheduled local worker discovers and executes this task without any user message to Codex, preserves main and gameplay files, and returns a result to ia-business/results/TASK-0003.json.",
-  "expected": [
-    "worker discovers task automatically",
-    "exactly one execution",
+  "cost_allowed": 0,
+  "requires_human_approval": false,
+  "instructions": [
+    "Autonomous pre-production bridge test deposited from ChatGPT/cloud. Verify the scheduled local worker discovers and executes this task without any user message to Codex.",
+    "Preserve main and gameplay files unchanged.",
+    "Return the structured result to ia-business/results/TASK-0003.json."
+  ],
+  "success_criteria": [
+    "Worker discovers task automatically",
+    "Exactly one execution",
     "main unchanged",
     "gameplay files unchanged",
-    "result synchronized to ia-business-sync"
+    "Result synchronized to ia-business-sync"
   ]
 }
