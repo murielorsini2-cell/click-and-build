@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "id": "TASK-0004",
+  "kind": "repo_readonly_diagnostic",
+  "status": "running",
+  "task_blob": "5495faf952cab0f6b3c0f4f7bf0b419d3526a227",
+  "execution_id": "b24b84ef-1885-4827-9900-bcd581059375",
+  "claimed_at": "2026-09-30T20:29:11.717Z",
+  "created_at": "2026-09-30T19:09:23.000Z",
+  "expires_at": "2026-09-30T23:09:23.000Z",
+  "handler_executed": null
+}
