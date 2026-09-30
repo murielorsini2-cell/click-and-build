@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "id": "TASK-TEST-0004",
+  "kind": "bridge_self_test",
+  "status": "running",
+  "task_blob": "1c39736def94192946cea9282b60276988e3d714",
+  "execution_id": "0616ab11-5a41-49b8-9844-a3c0f81163c8",
+  "claimed_at": "2026-09-30T18:32:44.821Z",
+  "created_at": "2026-09-30T18:31:12.592Z",
+  "expires_at": "2026-09-30T19:32:12.592Z",
+  "handler_executed": null
+}
