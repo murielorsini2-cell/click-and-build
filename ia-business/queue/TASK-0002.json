@@ -1,0 +1,34 @@
+{
+  "id": "TASK-0002",
+  "kind": "install_local_worker_preprod",
+  "status": "ready",
+  "target_repo": "click-and-build",
+  "target_branch": "ia-business-test",
+  "risk": "low",
+  "cost_allowed": 0,
+  "objective": "Install and validate a persistent local IA Business queue worker without modifying gameplay or main.",
+  "requirements": [
+    "Verify exact repository and clean git state before acting.",
+    "Never modify, checkout, merge, commit to, or push main.",
+    "Implement the worker as a small auditable script under ia-business/worker/ and keep runtime state outside gameplay files.",
+    "The worker must fetch origin/ia-business-sync, discover ready tasks, reject tasks requiring human approval, reject nonzero cost, acquire an exclusive lock, execute only allowlisted low-risk task kinds, write structured results, and push only to ia-business-sync.",
+    "Do not create a general arbitrary remote shell. TASK payloads must not contain free-form shell commands for automatic execution.",
+    "Install a Windows per-user startup/scheduled trigger only if it can be done without administrator privileges, without payment, and reversibly. Prefer an event/short idle-efficient mechanism; if Windows forces polling, use a conservative interval and document it.",
+    "Do not store secrets or credentials in the repository.",
+    "Add dry-run/self-test support and logging.",
+    "Run a self-test proving the worker can see TASK-0002, that main remains unchanged, and that no gameplay file changed.",
+    "After successful installation, mark TASK-0002 completed via ia-business/results/TASK-0002.json and report the exact trigger installed, its status, worker PID/process state if applicable, tests run, and rollback/uninstall command.",
+    "If any unexpected permission, credential, administrator, security, or destructive prompt is required, stop and report blocked instead of bypassing it."
+  ],
+  "success_criteria": [
+    "Persistent/restartable local trigger installed and enabled",
+    "Worker code auditable and restricted",
+    "Cloud queue fetch verified",
+    "Result return path verified",
+    "main unchanged",
+    "gameplay unchanged",
+    "zero cost",
+    "rollback documented"
+  ],
+  "requires_human_approval": false
+}
