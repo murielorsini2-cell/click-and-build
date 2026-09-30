@@ -10,10 +10,7 @@
   "created_at": "2026-09-30T19:09:23.000Z",
   "expires_at": "2026-09-30T23:09:23.000Z",
   "instructions": [
-    "Perform the first real read-only diagnostic of the local Click & Build repository.",
-    "Inspect repository identity, active branch, working-tree state, repository structure, and the project files available to the fixed read-only diagnostic operations.",
-    "Report which version/branch appears to contain the actual evolved gameplay and identify evidence relevant to the known customization issue (gender, eyes, hair not visibly applying) and baby posture/appearance progression, but do not modify or execute project code.",
-    "Do not create, modify, delete, move, commit, push, publish, install, or run arbitrary project commands. Preserve main and every gameplay file byte-for-byte."
+    "Inspect tracked project files and Git state without modifying project files."
   ],
   "success_criteria": [
     "Structured diagnostic delivered to ia-business/results/TASK-0004.json",
