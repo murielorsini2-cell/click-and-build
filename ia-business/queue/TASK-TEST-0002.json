@@ -1,0 +1,17 @@
+{
+  "id": "TASK-TEST-0002",
+  "kind": "bridge_self_test",
+  "status": "ready",
+  "target_repo": "click-and-build",
+  "target_branch": "ia-business-test",
+  "risk": "low",
+  "cost_allowed": 0,
+  "requires_human_approval": false,
+  "instructions": [
+    "Harmless installation integration test: fixed repository and runtime version checks only. No gameplay changes."
+  ],
+  "success_criteria": [
+    "Structured result delivered to ia-business/results/TASK-TEST-0002.json",
+    "main and gameplay unchanged"
+  ]
+}
