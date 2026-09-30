@@ -1,0 +1,22 @@
+{
+  "id": "TASK-0001",
+  "kind": "bridge_self_test",
+  "status": "ready",
+  "target_repo": "click-and-build",
+  "target_branch": "ia-business-test",
+  "risk": "low",
+  "cost_allowed": 0,
+  "instructions": [
+    "Verify exact repository path before acting",
+    "Verify active branch is ia-business-test and main is untouched",
+    "Create no gameplay changes",
+    "Return git status, HEAD, Node/npm/Git versions and worker connectivity report"
+  ],
+  "success_criteria": [
+    "Correct repo locked",
+    "main unchanged",
+    "working tree reported",
+    "result written to ia-business/results/TASK-0001.json"
+  ],
+  "requires_human_approval": false
+}
