@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "id": "TASK-0002",
+  "kind": "install_local_worker_preprod",
+  "status": "blocked",
+  "final_status": "blocked",
+  "verified_at_utc": "2026-09-30T02:17:39.6915335Z",
+  "repository": "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+  "branch_used": "ia-business-test",
+  "HEAD": "b526ef57418be05ba9f10cfa8f6b75724d216a4e",
+  "source_sync_commit": "4f8dc65aa60a9f306e570555368dc054a6236fdf",
+  "main_before": "b526ef57418be05ba9f10cfa8f6b75724d216a4e",
+  "main_after": "b526ef57418be05ba9f10cfa8f6b75724d216a4e",
+  "remote_main_before": "b526ef57418be05ba9f10cfa8f6b75724d216a4e\trefs/heads/main",
+  "working_tree": "clean",
+  "gameplay_changes": [],
+  "cost": 0,
+  "blocker": {
+    "command": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -NonInteractive -File .\\work\\worker.ps1 -Mode SelfTest",
+    "category": "security_policy",
+    "exit_code": 1,
+    "guardrail": "If any unexpected permission, credential, administrator, security, or destructive prompt is required, stop and report blocked instead of bypassing it.",
+    "error": "PSSecurityException / UnauthorizedAccess: execution of scripts is disabled on this system",
+    "scope": "Observed during the pre-install self-test in the Codex execution environment; actual scheduled-context policy was not assumed or bypassed"
+  },
+  "preparation": {
+    "intended_interval": "15 minutes while current user is logged in",
+    "code": "Drafted in Codex work directory only; not installed, committed or executed successfully",
+    "runtime": "Not installed",
+    "allowlist": "bridge_self_test only in draft"
+  },
+  "trigger": {
+    "installed": false,
+    "name": "IA Business - click-and-build - queue worker",
+    "enabled": false,
+    "state": "not_installed"
+  },
+  "worker_process": {
+    "pid": null,
+    "state": "not_running"
+  },
+  "tests": {
+    "TASK_0002_visible": "passed",
+    "scheduler_read_access": "passed",
+    "working_tree": "clean",
+    "main": "unchanged",
+    "branch": "passed",
+    "cloud_queue_fetch": "passed",
+    "policy_self_test": "blocked before script execution",
+    "result_delivery": "pending containing commit; post-push verification recorded separately",
+    "persistent_trigger": "not_installed",
+    "repository": "passed"
+  },
+  "commands_executed": [
+    {
+      "result": "Preflight reported LocalMachine RemoteSigned in current shell; does not establish Windows PowerShell child policy",
+      "command": "Get-ExecutionPolicy -List"
+    },
+    {
+      "result": "Read-only current-user scheduler access succeeded",
+      "command": "Schedule.Service Connect and GetTasks(0)"
+    },
+    {
+      "result": "Executable paths identified",
+      "command": "Get-Command node.exe,npm.cmd,powershell.exe"
+    },
+    {
+      "result": "Script execution disabled; halted as required",
+      "exit_code": 1,
+      "command": "powershell.exe -NoProfile -NonInteractive -File .\\work\\worker.ps1 -Mode SelfTest"
+    },
+    {
+      "exit_code": 0,
+      "command": "git rev-parse --show-toplevel"
+    },
+    {
+      "exit_code": 0,
+      "command": "git symbolic-ref --short HEAD"
+    },
+    {
+      "exit_code": 0,
+      "command": "git status --porcelain=v1 --untracked-files=all"
+    },
+    {
+      "exit_code": 0,
+      "command": "git rev-parse HEAD"
+    },
+    {
+      "exit_code": 0,
+      "command": "git rev-parse refs/heads/main"
+    },
+    {
+      "exit_code": 0,
+      "command": "git ls-remote --heads origin refs/heads/main"
+    },
+    {
+      "exit_code": 0,
+      "command": "git fetch --no-tags origin refs/heads/ia-business-sync:refs/remotes/origin/ia-business-sync"
+    },
+    {
+      "exit_code": 0,
+      "command": "git rev-parse origin/ia-business-sync"
+    },
+    {
+      "exit_code": 0,
+      "command": "git ls-tree --name-only 4f8dc65aa60a9f306e570555368dc054a6236fdf ia-business/results/TASK-0002.json"
+    }
+  ],
+  "files_modified": [
+    "ia-business/results/TASK-0002.json"
+  ],
+  "rollback": "No installed trigger or worker to uninstall. Only draft files remain in the Codex work directory; repository gameplay and main are untouched.",
+  "next_action": "Resolve or explicitly review the observed Windows PowerShell execution-policy restriction before a new authorized installation attempt. No ExecutionPolicy Bypass, elevation to administrator, alternate runtime workaround or policy change was attempted.",
+  "prior_interruption": "Earlier automatic approval review failed due to usage limit. User explicitly requested resume; scheduler preflight then succeeded. Current blocker is the subsequent script execution security failure."
+}
