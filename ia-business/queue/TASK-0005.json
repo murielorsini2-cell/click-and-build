@@ -1,0 +1,18 @@
+{
+  "id": "TASK-0005",
+  "kind": "repo_targeted_code_diagnostic",
+  "status": "ready",
+  "target_repo": "click-and-build",
+  "target_branch": "ia-business-test",
+  "risk": "low",
+  "cost_allowed": 0,
+  "requires_human_approval": false,
+  "created_at": "2026-09-30T21:35:00.000Z",
+  "expires_at": "2026-10-01T01:35:00.000Z",
+  "instructions": [
+    "Statically trace baby sex/gender, eye and hair customization representation, storage and application in tracked source files; report observable data-flow inconsistencies without executing or modifying project code."
+  ],
+  "success_criteria": [
+    "Return file and line evidence for baby customization data flow and candidate inconsistencies."
+  ]
+}
