@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "id": "TASK-0006",
+  "kind": "repo_gameplay_branch_discovery",
+  "status": "running",
+  "task_blob": "7d62b9617a21f68ad87242b82c5722ecd3adf8ee",
+  "execution_id": "7ab3d76d-b463-4445-9a17-fd782cdb4c6d",
+  "claimed_at": "2026-10-01T00:29:11.595Z",
+  "created_at": "2026-10-01T00:25:00Z",
+  "expires_at": "2026-10-01T04:25:00Z",
+  "handler_executed": null
+}
