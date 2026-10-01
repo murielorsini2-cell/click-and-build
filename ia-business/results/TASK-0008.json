@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "id": "TASK-0008",
+  "kind": "repo_gameplay_snapshot_comparison",
+  "status": "running",
+  "task_blob": "f4738d00c129a5492d6bc04b69d7b9e726c45693",
+  "execution_id": "0515c22a-be59-4582-aa33-ec2556e78a8a",
+  "claimed_at": "2026-10-01T06:29:10.973Z",
+  "created_at": "2026-10-01T06:21:00.662Z",
+  "expires_at": "2026-10-01T10:21:00.662Z",
+  "handler_executed": null
+}
