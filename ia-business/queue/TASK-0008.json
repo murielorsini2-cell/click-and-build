@@ -1,0 +1,20 @@
+{
+  "id": "TASK-0008",
+  "kind": "repo_gameplay_snapshot_comparison",
+  "status": "ready",
+  "target_repo": "click-and-build",
+  "target_branch": "ia-business-test",
+  "risk": "low",
+  "cost_allowed": 0,
+  "requires_human_approval": false,
+  "instructions": [
+    "Compare already available local Git branch snapshots for static file-and-line evidence of baby gender, eye and hair customization, storage, rendering and progression; report insufficient or ambiguous evidence explicitly without selecting a modification target, fetching, executing or changing code or references."
+  ],
+  "success_criteria": [
+    "Report each compared reference and commit with file-and-line evidence for customization, storage, rendering and progression.",
+    "Explicitly report insufficient or ambiguous evidence without guessing.",
+    "Keep modification_target null and leave gameplay files and Git references unchanged."
+  ],
+  "created_at": "2026-10-01T06:21:00.662Z",
+  "expires_at": "2026-10-01T10:21:00.662Z"
+}
