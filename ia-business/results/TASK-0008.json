@@ -2,11 +2,2648 @@
   "schema_version": 2,
   "id": "TASK-0008",
   "kind": "repo_gameplay_snapshot_comparison",
-  "status": "running",
-  "task_blob": "f4738d00c129a5492d6bc04b69d7b9e726c45693",
+  "status": "rejected",
+  "final_status": "rejected",
+  "verified_at_utc": "2026-10-01T06:29:19.602Z",
   "execution_id": "0515c22a-be59-4582-aa33-ec2556e78a8a",
-  "claimed_at": "2026-10-01T06:29:10.973Z",
+  "handler_executed": true,
   "created_at": "2026-10-01T06:21:00.662Z",
   "expires_at": "2026-10-01T10:21:00.662Z",
-  "handler_executed": null
+  "worker_pid": 9020,
+  "repository": "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+  "branch_used": "ia-business-test",
+  "HEAD": "fc86503555e4246cb6136c96dd7d739332d6dcf0",
+  "main_before": "b526ef57418be05ba9f10cfa8f6b75724d216a4e",
+  "main_after": "b526ef57418be05ba9f10cfa8f6b75724d216a4e",
+  "working_tree": "clean",
+  "source_sync_commit": "7e9af533dc841f61c18584e43e6438fa537930e6",
+  "task_blob": "f4738d00c129a5492d6bc04b69d7b9e726c45693",
+  "commands_executed": [
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "symbolic-ref",
+        "--short",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "--is-shallow-repository"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "refs/heads/main"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "fetch",
+        "--no-tags",
+        "origin",
+        "refs/heads/ia-business-sync:refs/remotes/origin/ia-business-sync"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "refs/remotes/origin/ia-business-sync"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "7e9af533dc841f61c18584e43e6438fa537930e6",
+        "ia-business/queue"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "7e9af533dc841f61c18584e43e6438fa537930e6",
+        "ia-business/results"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0001.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0001.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/results/TASK-0001.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0002.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0002.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/results/TASK-0002.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0003.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0003.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/results/TASK-0003.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0004.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0004.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/results/TASK-0004.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0005.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0005.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/results/TASK-0005.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0006.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0006.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/results/TASK-0006.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0007.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0007.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/results/TASK-0007.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "show",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0008.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0008.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "log",
+        "-1",
+        "--format=%H",
+        "7e9af533dc841f61c18584e43e6438fa537930e6",
+        "--",
+        "ia-business/results/TASK-0008.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "symbolic-ref",
+        "--short",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "--is-shallow-repository"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "refs/heads/main"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "fetch",
+        "--no-tags",
+        "origin",
+        "refs/heads/ia-business-sync:refs/remotes/origin/ia-business-sync"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "refs/remotes/origin/ia-business-sync"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "7e9af533dc841f61c18584e43e6438fa537930e6:ia-business/queue/TASK-0008.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "7e9af533dc841f61c18584e43e6438fa537930e6",
+        "ia-business/results"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "log",
+        "-1",
+        "--format=%H",
+        "7e9af533dc841f61c18584e43e6438fa537930e6",
+        "--",
+        "ia-business/results/TASK-0008.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "read-tree",
+        "7e9af533dc841f61c18584e43e6438fa537930e6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "hash-object",
+        "-w",
+        "--",
+        "C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\TASK-0008.claim.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "update-index",
+        "--add",
+        "--cacheinfo",
+        "100644,0c1d28f459415ac632fe7b5f59c3a1f0cf3fa322,ia-business/results/TASK-0008.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "write-tree"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "diff",
+        "--name-only",
+        "7e9af533dc841f61c18584e43e6438fa537930e6",
+        "a0839fabe16942d4711b5a6007636131c7f74ce8"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "commit-tree",
+        "a0839fabe16942d4711b5a6007636131c7f74ce8",
+        "-p",
+        "7e9af533dc841f61c18584e43e6438fa537930e6",
+        "-m",
+        "IA Business result TASK-0008"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "symbolic-ref",
+        "--short",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "--is-shallow-repository"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "refs/heads/main"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "push",
+        "origin",
+        "07277128c93bc4c16d58d2d7176904cc4ccd1389:refs/heads/ia-business-sync"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "fetch",
+        "--no-tags",
+        "origin",
+        "refs/heads/ia-business-sync:refs/remotes/origin/ia-business-sync"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "refs/remotes/origin/ia-business-sync:ia-business/results/TASK-0008.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "for-each-ref",
+        "--format=%(refname)%09%(objectname)%09%(objecttype)%09%(symref)"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "-z",
+        "-l",
+        "fc86503555e4246cb6136c96dd7d739332d6dcf0"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "f7b0f3b4822180718f4c862d099ce3bf0821ba27"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "931fae2cba49a5c0f40149a2b37785d9f821d107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "75e446a6841315dd316b3b211c2dd7955e514ff1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "5efc55138f305bdf4b13c32885a151cfc1fb51c2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "575b260dffaf06ab1f6287b7e7f024f9ca41118a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "c21d737bc278c7e51e0a4afe0345780a610e259a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "-z",
+        "-l",
+        "b526ef57418be05ba9f10cfa8f6b75724d216a4e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "f7b0f3b4822180718f4c862d099ce3bf0821ba27"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "931fae2cba49a5c0f40149a2b37785d9f821d107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "75e446a6841315dd316b3b211c2dd7955e514ff1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "5efc55138f305bdf4b13c32885a151cfc1fb51c2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "575b260dffaf06ab1f6287b7e7f024f9ca41118a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "c21d737bc278c7e51e0a4afe0345780a610e259a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "-z",
+        "-l",
+        "8b6495bafea770b3cb1860907b711d789dfd3e91"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "f7b0f3b4822180718f4c862d099ce3bf0821ba27"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "931fae2cba49a5c0f40149a2b37785d9f821d107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "2fa64852144676f79a43576cde73bfc47fb6768a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "923f88b52ac260c3cb564efb3ad2c0c9474a822e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "d2b4b169cbbb38405f9b97db7988b5231502bb6e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "923f88b52ac260c3cb564efb3ad2c0c9474a822e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "-z",
+        "-l",
+        "0c8c29968c0dccfcc80e52e55641de5f71d1eabd"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "f7b0f3b4822180718f4c862d099ce3bf0821ba27"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "931fae2cba49a5c0f40149a2b37785d9f821d107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "2fa64852144676f79a43576cde73bfc47fb6768a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "923f88b52ac260c3cb564efb3ad2c0c9474a822e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "403506211a155ae11e859b305452c60d24510f6c"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "dc91cb354e04ad56df51725a406bb25abbc4ba29"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "3f87bc6cdff7404b92b0b8946ce18131c26cd759"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "-z",
+        "-l",
+        "07277128c93bc4c16d58d2d7176904cc4ccd1389"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "f7b0f3b4822180718f4c862d099ce3bf0821ba27"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "931fae2cba49a5c0f40149a2b37785d9f821d107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "75e446a6841315dd316b3b211c2dd7955e514ff1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "5efc55138f305bdf4b13c32885a151cfc1fb51c2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "575b260dffaf06ab1f6287b7e7f024f9ca41118a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "c21d737bc278c7e51e0a4afe0345780a610e259a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "for-each-ref",
+        "--format=%(refname)%09%(objectname)%09%(objecttype)%09%(symref)"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "symbolic-ref",
+        "--short",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "--is-shallow-repository"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "refs/heads/main"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "checks": {
+    "repository": "passed",
+    "exclusive_lock": "passed",
+    "remote_reservation": "passed",
+    "main_unchanged": "passed",
+    "gameplay_unchanged": "passed",
+    "origin_fetch": "passed"
+  },
+  "files_modified": [
+    "ia-business/results/TASK-0008.json"
+  ],
+  "cost": 0,
+  "delivery": "Worker verifies containing commit on origin after push; see local delivery log.",
+  "reason": "insufficient_static_evidence",
+  "handler_commands": [
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "for-each-ref",
+        "--format=%(refname)%09%(objectname)%09%(objecttype)%09%(symref)"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "-z",
+        "-l",
+        "fc86503555e4246cb6136c96dd7d739332d6dcf0"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "f7b0f3b4822180718f4c862d099ce3bf0821ba27"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "931fae2cba49a5c0f40149a2b37785d9f821d107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "75e446a6841315dd316b3b211c2dd7955e514ff1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "5efc55138f305bdf4b13c32885a151cfc1fb51c2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "575b260dffaf06ab1f6287b7e7f024f9ca41118a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "c21d737bc278c7e51e0a4afe0345780a610e259a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "-z",
+        "-l",
+        "b526ef57418be05ba9f10cfa8f6b75724d216a4e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "f7b0f3b4822180718f4c862d099ce3bf0821ba27"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "931fae2cba49a5c0f40149a2b37785d9f821d107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "75e446a6841315dd316b3b211c2dd7955e514ff1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "5efc55138f305bdf4b13c32885a151cfc1fb51c2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "575b260dffaf06ab1f6287b7e7f024f9ca41118a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "c21d737bc278c7e51e0a4afe0345780a610e259a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "-z",
+        "-l",
+        "8b6495bafea770b3cb1860907b711d789dfd3e91"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "f7b0f3b4822180718f4c862d099ce3bf0821ba27"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "931fae2cba49a5c0f40149a2b37785d9f821d107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "2fa64852144676f79a43576cde73bfc47fb6768a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "923f88b52ac260c3cb564efb3ad2c0c9474a822e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "d2b4b169cbbb38405f9b97db7988b5231502bb6e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "923f88b52ac260c3cb564efb3ad2c0c9474a822e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "-z",
+        "-l",
+        "0c8c29968c0dccfcc80e52e55641de5f71d1eabd"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "f7b0f3b4822180718f4c862d099ce3bf0821ba27"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "931fae2cba49a5c0f40149a2b37785d9f821d107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "2fa64852144676f79a43576cde73bfc47fb6768a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "923f88b52ac260c3cb564efb3ad2c0c9474a822e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "403506211a155ae11e859b305452c60d24510f6c"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "dc91cb354e04ad56df51725a406bb25abbc4ba29"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "3f87bc6cdff7404b92b0b8946ce18131c26cd759"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "ls-tree",
+        "-r",
+        "-z",
+        "-l",
+        "07277128c93bc4c16d58d2d7176904cc4ccd1389"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "f7b0f3b4822180718f4c862d099ce3bf0821ba27"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "931fae2cba49a5c0f40149a2b37785d9f821d107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "75e446a6841315dd316b3b211c2dd7955e514ff1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "5efc55138f305bdf4b13c32885a151cfc1fb51c2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "575b260dffaf06ab1f6287b7e7f024f9ca41118a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "1c833d535aac077e4c8f3e374fbf7671a0d629b6"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "cat-file",
+        "blob",
+        "c21d737bc278c7e51e0a4afe0345780a610e259a"
+      ],
+      "exit_code": 0
+    },
+    {
+      "executable": "git.exe",
+      "arguments": [
+        "-c",
+        "core.hooksPath=C:\\Users\\Muriel\\Documents\\Codex\\2026-09-29\\referenced-chatgpt-conversation-this-is-an\\work\\node-worker-runtime\\empty-hooks",
+        "-C",
+        "C:\\Users\\Muriel\\Documents\\ChatGPT\\click&build",
+        "for-each-ref",
+        "--format=%(refname)%09%(objectname)%09%(objecttype)%09%(symref)"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "diagnostic": {
+    "schema_version": 1,
+    "mode": "gameplay_snapshot_comparison",
+    "status": "rejected",
+    "reason": "insufficient_static_evidence",
+    "modification_target": null,
+    "candidate_snapshots": [],
+    "comparisons": [
+      {
+        "ref": "refs/heads/ia-business-test",
+        "snapshot": "fc86503555e4246cb6136c96dd7d739332d6dcf0",
+        "certainty": "static_evidence_only",
+        "baby_context": [],
+        "fields": [
+          {
+            "field": "gender",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "eyes",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "hair",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          }
+        ],
+        "storage_operations": [],
+        "rendering_evidence": [],
+        "progression_evidence": [],
+        "findings": [
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "gender",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "eyes",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "hair",
+            "certainty": "scope_observation"
+          }
+        ],
+        "skipped": [
+          {
+            "path": "ia-business/worker/README.md",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/worker/worker.cjs",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/worker/worker.test.cjs",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          }
+        ],
+        "incomplete_scope": false,
+        "static_pattern_complete": false
+      },
+      {
+        "ref": "refs/heads/main",
+        "snapshot": "b526ef57418be05ba9f10cfa8f6b75724d216a4e",
+        "certainty": "static_evidence_only",
+        "baby_context": [],
+        "fields": [
+          {
+            "field": "gender",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "eyes",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "hair",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          }
+        ],
+        "storage_operations": [],
+        "rendering_evidence": [],
+        "progression_evidence": [],
+        "findings": [
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "gender",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "eyes",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "hair",
+            "certainty": "scope_observation"
+          }
+        ],
+        "skipped": [],
+        "incomplete_scope": false,
+        "static_pattern_complete": false
+      },
+      {
+        "ref": "refs/remotes/ia-business-discovery/checkpoint-panneaux-valides-2026-09-27",
+        "snapshot": "8b6495bafea770b3cb1860907b711d789dfd3e91",
+        "certainty": "static_evidence_only",
+        "baby_context": [],
+        "fields": [
+          {
+            "field": "gender",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "eyes",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "hair",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          }
+        ],
+        "storage_operations": [],
+        "rendering_evidence": [],
+        "progression_evidence": [],
+        "findings": [
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "gender",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "eyes",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "hair",
+            "certainty": "scope_observation"
+          }
+        ],
+        "skipped": [],
+        "incomplete_scope": false,
+        "static_pattern_complete": false
+      },
+      {
+        "ref": "refs/remotes/ia-business-discovery/layout-publicites",
+        "snapshot": "8b6495bafea770b3cb1860907b711d789dfd3e91",
+        "certainty": "static_evidence_only",
+        "baby_context": [],
+        "fields": [
+          {
+            "field": "gender",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "eyes",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "hair",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          }
+        ],
+        "storage_operations": [],
+        "rendering_evidence": [],
+        "progression_evidence": [],
+        "findings": [
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "gender",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "eyes",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "hair",
+            "certainty": "scope_observation"
+          }
+        ],
+        "skipped": [],
+        "incomplete_scope": false,
+        "static_pattern_complete": false
+      },
+      {
+        "ref": "refs/remotes/ia-business-discovery/v2-gameplay",
+        "snapshot": "0c8c29968c0dccfcc80e52e55641de5f71d1eabd",
+        "certainty": "static_evidence_only",
+        "baby_context": [],
+        "fields": [
+          {
+            "field": "gender",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "eyes",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "hair",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          }
+        ],
+        "storage_operations": [],
+        "rendering_evidence": [],
+        "progression_evidence": [],
+        "findings": [
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "gender",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "eyes",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "hair",
+            "certainty": "scope_observation"
+          }
+        ],
+        "skipped": [],
+        "incomplete_scope": false,
+        "static_pattern_complete": false
+      },
+      {
+        "ref": "refs/remotes/origin/ia-business-sync",
+        "snapshot": "07277128c93bc4c16d58d2d7176904cc4ccd1389",
+        "certainty": "static_evidence_only",
+        "baby_context": [],
+        "fields": [
+          {
+            "field": "gender",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "eyes",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "hair",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          }
+        ],
+        "storage_operations": [],
+        "rendering_evidence": [],
+        "progression_evidence": [],
+        "findings": [
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "gender",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "eyes",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "hair",
+            "certainty": "scope_observation"
+          }
+        ],
+        "skipped": [
+          {
+            "path": "ia-business/QUEUE-CONTRACT-v1.md",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/README.md",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/README.md",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/TASK-0001.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/TASK-0002.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/TASK-0003.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/TASK-0004.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/TASK-0005.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/TASK-0006.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/TASK-0007.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/TASK-0008.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/TASK-TEST-0002.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/TASK-TEST-0004.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/queue/TASK-TEST-0005.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/README.md",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/TASK-0001.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/TASK-0002.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/TASK-0003.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/TASK-0004.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/TASK-0005.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/TASK-0006.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/TASK-0007.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/TASK-0008.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/TASK-TEST-0002.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/TASK-TEST-0004.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/results/TASK-TEST-0005.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          },
+          {
+            "path": "ia-business/state.json",
+            "reason": "outside_fixed_text_scope_or_nonregular"
+          }
+        ],
+        "incomplete_scope": false,
+        "static_pattern_complete": false
+      },
+      {
+        "ref": "refs/remotes/origin/main",
+        "snapshot": "b526ef57418be05ba9f10cfa8f6b75724d216a4e",
+        "certainty": "static_evidence_only",
+        "baby_context": [],
+        "fields": [
+          {
+            "field": "gender",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "eyes",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          },
+          {
+            "field": "hair",
+            "stages": [],
+            "evidence": [],
+            "complete_static_pattern": false
+          }
+        ],
+        "storage_operations": [],
+        "rendering_evidence": [],
+        "progression_evidence": [],
+        "findings": [
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "gender",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "eyes",
+            "certainty": "scope_observation"
+          },
+          {
+            "code": "no_field_evidence_in_scope",
+            "field": "hair",
+            "certainty": "scope_observation"
+          }
+        ],
+        "skipped": [],
+        "incomplete_scope": false,
+        "static_pattern_complete": false
+      }
+    ],
+    "limits": {
+      "references": 32,
+      "snapshots": 16,
+      "blob_reads": 256,
+      "total_bytes": 16777216
+    },
+    "limitations": [
+      "Lexical evidence is not proof of runtime behavior or semantic data flow. Comments, strings, aliases and multiline expressions may cause false positives or omissions.",
+      "A complete static pattern is a candidate only; no branch is selected for modification and no bug is corrected.",
+      "Progression terms are reported only with baby context in the same inspected file; they do not certify baby evolution.",
+      "Snapshots sharing a commit are aliases, not distinct implementations. Only bounded tracked root/src/dist text scope is inspected; skipped scope is explicit."
+    ]
+  }
 }
